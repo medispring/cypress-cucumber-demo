@@ -20,7 +20,7 @@ const logInBtn = "//button[@data-cy='signInBtn']";
 
 class LoginPage extends PageBase {
   visit() {
-    super.visit(path, title);
+    return super.visit(path, title);
   }
 
   setPrivateKey(keyString, rsa) {

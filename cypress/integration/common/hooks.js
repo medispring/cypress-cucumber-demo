@@ -19,10 +19,17 @@ afterEach(function() {
   }
   //reset cleanup counters for the next run
   APICleanup.resetToPatientsToDeleteCounters();
-  //logout current user
-  //close eventually opened modals that might prevent the to click on the user details button
-  ElementsHelper.clickIfElementVisible(ModalBase.modalTitleSelector, ModalBase.modalCloseBtnSelector);
-  SideNavigationPanel.userDetailsBtnClick();
-  UserDetailsModal.getModalTitle();
-  UserDetailsModal.logoutBtnClick();
-});
+  //logout current user if I'm not already on the login page
+  cy.url().then($url => {
+    if($url != Cypress.env("baseUrl"))
+    {
+      cy.log('inside')
+      cy.log($url)
+      //close eventually opened modals that might prevent the to click on the user details button
+      ElementsHelper.clickIfElementVisible(ModalBase.modalTitleSelector, ModalBase.modalCloseBtnSelector);
+      SideNavigationPanel.userDetailsBtnClick();
+      UserDetailsModal.getModalTitle();
+      UserDetailsModal.logoutBtnClick();
+    }
+  })
+  });

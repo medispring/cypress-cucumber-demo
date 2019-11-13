@@ -1,5 +1,8 @@
 {
-  "ignoreTestFiles": "*.js",
+  "ignoreTestFiles": ["*.js",
+    "**/__snapshots__/*",
+    "**/__image_snapshots__/*"
+  ],
   "env": {
     "baseUrl": "https://dev.medispring.be/",
     "connectionType":"Cabinet",

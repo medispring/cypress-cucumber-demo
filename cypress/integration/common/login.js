@@ -1,5 +1,5 @@
 import LoginPage from "../../elements/pages/LoginPage";
-import { Given } from "cypress-cucumber-preprocessor/steps";
+import { Given, When } from "cypress-cucumber-preprocessor/steps";
 import DashboardPage from "../../elements/pages/DashboardPage";
 
 Given(/^I login with user "([^"]*)"$/, function(username) {
@@ -18,4 +18,8 @@ Given(/^I login with user "([^"]*)"$/, function(username) {
   LoginPage.setIcure();
   LoginPage.loginBtnClick();
   DashboardPage.getPatientList();
+});
+
+When(/^I navigate to the Login page/, function() {
+  LoginPage.visit();
 });
