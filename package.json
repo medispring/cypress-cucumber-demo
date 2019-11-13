@@ -1,0 +1,21 @@
+{
+  "name": "cypress-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "openAll": "cypress open",
+    "openTag": "cypress open --browser chrome --env TAGS=@runMe"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.6.0",
+    "cypress-cucumber-preprocessor": "^1.16.2",
+    "cypress-xpath": "^1.4.0",
+    "prettier": "^1.18.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

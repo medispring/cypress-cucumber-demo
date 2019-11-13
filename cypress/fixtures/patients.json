@@ -1,0 +1,10 @@
+{
+  "Patients": [
+    {
+      "patient_id": "newPatient_allFields",
+      "firstName": "Cypress2",
+      "lastName": "AutomatedTest1234",
+      "birthDate": "01011980"
+    }
+  ]
+}

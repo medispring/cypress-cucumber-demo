@@ -1,1 +1,1 @@
-# cypress-cucumber-demo
+# cypress-E2E-example

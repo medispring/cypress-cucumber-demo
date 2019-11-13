@@ -1,0 +1,11 @@
+{
+  "ignoreTestFiles": "*.js",
+  "env": {
+    "baseUrl": "https://dev.medispring.be/",
+    "connectionType":"Cabinet",
+    "FHC": "https://fhcacc.icure.cloud",
+    "iCure": "https://backendb.svc.icure.cloud/rest/v1"
+  },
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 50000
+}
